@@ -3,12 +3,21 @@ window.onload = function () {
     const paletteSize = document.getElementById("palette-size"); 
     const generateBtn = document.getElementById("generate-btn");
     const paletteContainer = document.getElementById("palette-container");
+    const colorFormat = document.getElementById("color-format");
+
+    
 
     generateBtn.addEventListener("click", () => {
         let selectedSize = Number(paletteSize.value);
-        
+        let selectedFormat = colorFormat.value;
+        paletteContainer.innerHTML = "";
+
         for (let i = 0; i < selectedSize; i++) {
-            console.log(hslGenerator());
+            const color = hslGenerator();
+            const card = document.createElement("div");
+            card.classList.add("card")
+            paletteContainer.appendChild(card)
+            card.style.backgroundColor = color;
         }
     });
     

@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+.card {
+    width: 10%;
+    height: 20rem;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.palette-container {
+    display: flex;
+    justify-content: space-evenly;
+}
