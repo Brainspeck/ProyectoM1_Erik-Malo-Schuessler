@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Palette Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="main-container">
+        <header>
+            <h1>Color Palette Generator</h1>
+        </header>
+        <main>
+            <section>
+                <div class="controls">
+                    <label for="palette-size">Cantidad de colores:</label>
+                    <select id="palette-size" name="palette-size">
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <button id="generate-btn">Generate palette!</button>
+                </div>
+            </section>
+            <div id="palette-container" class="palette-container">
+            </div>
+        </main>
+        <footer>
+            <div class="author">
+                
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
