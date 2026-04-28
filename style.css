@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #F5F5F5;
+    background-color: #F1F5F9;
 }
 
 .main-container {
@@ -84,6 +84,8 @@ button:focus {
     width: 7.8rem;
     height: 15rem;
     border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .palette-container {

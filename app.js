@@ -7,7 +7,7 @@ window.onload = function () {
 
     //Tooltip function
     const showFeedback = () => {
-    feedback.innerText = "Paleta generada!!";
+    feedback.innerText = "¡Paleta generada!";
     feedback.classList.add("show");
 
     setTimeout(() => {
