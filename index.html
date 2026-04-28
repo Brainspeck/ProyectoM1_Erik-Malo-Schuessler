@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,11 @@
         <header>
             <h1>Colorfly Studio</h1>
         </header>
+
         <main>
-            <!--Controls section-->
-            <section>
+            <section aria-labelledby="controls-title">
+                <h2 id="controls-title">Opciones de generación</h2>
+
                 <div class="controls">
                     <label for="palette-size">Cantidad de colores a generar:</label>
                     <select id="palette-size" name="palette-size">
@@ -24,21 +26,28 @@
                         <option value="9">9</option>
                     </select>
 
-                    <label for="color-format">Seleccion el formato deseado:</label>
+                    <label for="color-format">Selecciona el formato deseado:</label>
                     <select name="color-format" id="color-format">
                         <option value="hsl">HSL</option>
                         <option value="hex">HEX</option>
                     </select>
 
-                    <button id="generate-btn">Generate palette!</button>
+                    <button id="generate-btn">Generar paleta</button>
+
+                    <p id="feedback" class="feedback" aria-live="polite"></p>
                 </div>
             </section>
-            <div id="palette-container" class="palette-container">
-            </div>
+
+            <section 
+                id="palette-container" 
+                class="palette-container" 
+                aria-label="Paleta de colores generada">
+            </section>
         </main>
+
         <footer>
-            <div class="author">
-                
+            <div class="made-by">
+                <p class="author">Created by: Erik Schuessler</p>
             </div>
         </footer>
     </div>

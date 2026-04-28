@@ -3,11 +3,23 @@ window.onload = function () {
     const generateBtn = document.getElementById("generate-btn");
     const paletteContainer = document.getElementById("palette-container");
     const colorFormat = document.getElementById("color-format");
+    const feedback = document.getElementById("feedback");
 
+    //Tooltip function
+    const showFeedback = () => {
+    feedback.innerText = "Paleta generada!!";
+    feedback.classList.add("show");
+
+    setTimeout(() => {
+        feedback.classList.remove("show");
+    }, 1500);
+};
+    //Button event listener
     generateBtn.addEventListener("click", () => {
         let selectedSize = Number(paletteSize.value);
         let selectedFormat = colorFormat.value;
         paletteContainer.innerHTML = "";
+        paletteContainer.style.gridTemplateColumns = `repeat(${selectedSize}, minmax(0, 1fr))`;
 
         //te selected format is HSL
         if (selectedFormat === "hsl") {
@@ -50,6 +62,7 @@ window.onload = function () {
                 codeContainer.appendChild(code);
             }
         }
+        showFeedback();
     });
 };
 
