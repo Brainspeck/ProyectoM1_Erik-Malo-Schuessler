@@ -12,12 +12,34 @@ window.onload = function () {
         let selectedFormat = colorFormat.value;
         paletteContainer.innerHTML = "";
 
-        for (let i = 0; i < selectedSize; i++) {
-            const color = hslGenerator();
-            const card = document.createElement("div");
-            card.classList.add("card")
-            paletteContainer.appendChild(card)
-            card.style.backgroundColor = color;
+        if (selectedFormat === 'hsl') {
+            for (let i = 0; i < selectedSize; i++) {
+                const color = hslGenerator();
+                const card = document.createElement("div");
+                card.classList.add("card")
+                paletteContainer.appendChild(card)
+                card.style.backgroundColor = color;
+            }
+        }
+
+        else {
+            for (let i = 0; i < selectedSize; i++) {
+                const color = hexGenerator(hexValues);
+                const card = document.createElement("div");
+                card.classList.add("card")
+                paletteContainer.appendChild(card)
+                card.style.backgroundColor = color;
+
+                const codeContainer = document.createElement("div");
+                const codeValue = color;
+                codeContainer.classList.add("code-container");
+                card.appendChild(codeContainer);
+
+                const code = document.createElement("p");
+                code.innerText = codeValue;
+                code.classList.add("hex-code")
+                codeContainer.appendChild(code);
+            }
         }
     });
     
