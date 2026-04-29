@@ -8,7 +8,7 @@ El usuario puede seleccionar la cantidad de colores (6, 8 o 9) y visualizar cada
 
 ## 🚀 Demo
 
-👉 [Ver repositorio](https://github.com/Brainspeck/ProyectoM1_Erik-Malo-Schuessler)
+👉 [Ver pagina web](https://brainspeck.github.io/ProyectoM1_Erik-Malo-Schuessler/)
 
 ---
 
